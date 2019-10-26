@@ -1,0 +1,2 @@
+This file contains the declaration of the MapSet
+data structure which is based on the AVL tree.

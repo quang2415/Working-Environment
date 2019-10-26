@@ -1,0 +1,7 @@
+clear
+close all
+mkdir(date);
+disp('Change datasets name in line below  ');
+dsName  = 'ecoli1.dat';
+data = read_dataset(dsName);
+[Ty,T,S] = proTraS(data);
