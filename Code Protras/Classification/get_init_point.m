@@ -4,6 +4,7 @@ function x_init = get_init_point(T)
     for c = 1:p
         vitual_point = [vitual_point min(T(:,c))];
     end
+    disp(vitual_point)
     diffT = setdiff(T, vitual_point, 'rows');
     d = distance2(diffT, vitual_point)';
     disp(d);

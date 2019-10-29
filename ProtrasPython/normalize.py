@@ -21,5 +21,4 @@ def normalize(NT):
         Moy = 0
 
     NT = NT.round(6)
-    print(NT)
     return NT
