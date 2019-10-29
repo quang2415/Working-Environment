@@ -19,3 +19,4 @@ def distance2(X, Y, *A):
     # D = (-2*X*A) * Y.transpose()
     D = X.dot(A)
     print(D)
+    print('Ay yo')

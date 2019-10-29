@@ -17,6 +17,6 @@ def get_init_point (T):
         if(vitual_point==T.loc[x,:].tolist()):
             T = T.drop([x])
     diffT = T.reset_index(drop=True)
-
-    print(vitual_point)
+    # print(diffT)
+    # print(vitual_point)
     d = distance2(diffT,vitual_point)

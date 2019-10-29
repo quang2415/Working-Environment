@@ -3,7 +3,7 @@ function [D]=distance2(X,Y,A)
 
 if(nargin<3)
     A=eye(size(X,2));
-end;
-disp(Y')
-disp(-2*X*A*Y');
+end
+disp(X);
+B=X*A
 D=sqrt(bsxfun(@plus,bsxfun(@plus,-2*X*A*Y',sum(X*A.*X,2)),[sum(Y*A.*Y,2)]'));
