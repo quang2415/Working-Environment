@@ -8,8 +8,10 @@ def get_init_point (T):
         # print(min(T.loc[:,c]))
         vitual_point.append(min(T.loc[:,c]))
 
-    T = T.drop_duplicates()
+    # print(vitual_point)
 
+    T = T.drop_duplicates()
+    # print(T)
     for x in range(0,T.shape[0]):
         # print(T.loc[x,:].tolist())
         if(vitual_point==T.loc[x,:].tolist()):
