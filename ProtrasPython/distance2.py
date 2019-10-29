@@ -10,7 +10,12 @@ def distance2(X, Y, *A):
 
     Y = np.asarray(Y)
 
-    Y = Y.reshape(7,1)
+    Y = Y.reshape(1,7)
 
-    D = (-2*X*A) * Y.getH()
+    X = np.asarray(X)
+
+    print(Y.transpose())
+
+    # D = (-2*X*A) * Y.transpose()
+    D = X.dot(A)
     print(D)
