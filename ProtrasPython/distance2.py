@@ -5,18 +5,17 @@ def distance2(X, Y, *A):
     if(len(A)==0):
         A = np.identity(X.shape[1])
 
-    # D = math.sqrt((-2*X*A*Y.getH())+(X*A*X).sum(axis=1) + (Y*A*Y).sum(axis=1))
-
-
-    Y = np.asarray(Y)
-
-    Y = Y.reshape(1,7)
+    Y = (np.asarray(Y)).reshape(1,len(Y))
 
     X = np.asarray(X)
 
-    print(Y.transpose())
+    D = ((-2*X).dot(A)).dot(Y.transpose())
 
-    # D = (-2*X*A) * Y.transpose()
-    D = X.dot(A)
-    print(D)
-    print('Ay yo')
+    E = ((X.dot(A)) * X).sum(axis=1)
+
+    E = E.reshape(E.shape[0],1)
+
+    F = (((Y.dot(A))*Y).sum(axis=1)).transpose()
+
+    G = np.sqrt(D + E + F)
+    # print(G.sum(axis=0))
