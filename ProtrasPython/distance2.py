@@ -18,4 +18,5 @@ def distance2(X, Y, *A):
     F = (((Y.dot(A))*Y).sum(axis=1)).transpose()
 
     G = np.sqrt(D + E + F)
+    return G
     # print(G.sum(axis=0))

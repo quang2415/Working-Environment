@@ -8,11 +8,13 @@ dict = {'First Score': [100, 90, 100, 95],
 
 # creating a dataframe from dictionary
 df = pd.DataFrame(dict)
-print(df)
+# print(df)
+
 # print(df.drop_duplicates(subset="Second Score"))
 # print(df.drop([0]).reset_index(drop=True))
 
-a = np.array([[1, 3], [2, 4]])
+a = np.array([[1, 3], [2, -4]])
 b = np.array([[3, 0],[1, 5]])
 c = [[39]]
-print(a+c)
+print(a.argmin(axis=1))
+print(a.min())

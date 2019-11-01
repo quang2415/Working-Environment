@@ -6,4 +6,4 @@ if(nargin<3)
 end
 %disp([sum(Y*A.*Y,2)]');
 D=sqrt(bsxfun(@plus,bsxfun(@plus,-2*X*A*Y',sum(X*A.*X,2)),[sum(Y*A.*Y,2)]'));
-
+print('Ay 
