@@ -1,6 +1,7 @@
 from normalize import normalize
 from get_init_point import get_init_point
 import numpy as np
+from distance2 import distance2
 
 def proTras(NT):
     n,p = NT.shape
@@ -27,6 +28,16 @@ def proTras(NT):
     weight = [0]
     idMax = [0]
     index_remove_group = [1]
-    index_remove_elements = false
+    index_remove_elements = np.full((n,1), False)
+    print(index_remove_elements)
+
+    while Cost>eps:
+        index_remove_elements[S] = True
+        diffPoints_Opt = TI[~index_remove_elements]
+        Ty[S[-1]] = s
+
+        "Tim khoang cach nho nhat tu 1 diem den 1 cum"
+        d = distance2(T[diffPoints_Opt,:], T[S[iS],:])
+
 
     return 0
