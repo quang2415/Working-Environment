@@ -13,8 +13,16 @@ df = pd.DataFrame(dict)
 # print(df.drop_duplicates(subset="Second Score"))
 # print(df.drop([0]).reset_index(drop=True))
 
+"""
 a = np.array([[1, 3], [2, -4]])
 b = np.array([[3, 0],[1, 5]])
 c = [[39]]
 print(a.argmin(axis=1))
-print(a.min())
+print(a.min())"""
+n = 10
+
+# a = np.asarray(np.linspace(1,n,num=n, dtype=int)).transpose()
+
+a = np.linspace(1,n,num=n, dtype=int).reshape(n,1)
+
+print(a)

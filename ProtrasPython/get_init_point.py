@@ -21,9 +21,7 @@ def get_init_point (T):
     # print(diffT)
     # print(vitual_point)
     d = (distance2(diffT,vitual_point)).transpose()
-    print(d)
     minValue = d.min()
     indMin = d.argmin()
     x_init = np.asarray((diffT.loc[indMin,:]))
-    print(x_init)
     return x_init

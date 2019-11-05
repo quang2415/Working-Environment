@@ -9,7 +9,5 @@ function x_init = get_init_point(T)
     d = distance2(diffT, vitual_point)';
     %disp(d);
     [minValue, indMin] = min(d(:));
-    disp(minValue);
-    disp(indMin);
     x_init = diffT(indMin, 1:end);
 end
