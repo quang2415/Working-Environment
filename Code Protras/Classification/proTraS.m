@@ -5,6 +5,7 @@ function [Ty,T,S] = proTraS(NT)
     s = 1; 
     x_init = get_init_point(T);
     [~, x_init_ind] = ismember(x_init, T, 'rows');
+    
     Cost = 1;
     TI = (1:n)';
     Ty = zeros(n,1);
@@ -21,6 +22,7 @@ function [Ty,T,S] = proTraS(NT)
     idMax = [0];
     index_remove_group = [1];
     index_remove_elements =false(n,1);
+    disp(index_remove_elements);
     while Cost > eps
         index_remove_elements(S) = 1;
         diffPoints_Opt = TI(~index_remove_elements);

@@ -200,6 +200,10 @@
         <entry key="MAIN">
           <value>
             <State>
+<<<<<<< HEAD
+              <option name="COLUMN_ORDER" />
+            </State>
+=======
               <option name="RECENTLY_FILTERED_USER_GROUPS">
                 <collection />
               </option>
@@ -221,6 +225,7 @@
         <entry key="User">
           <value>
             <list />
+>>>>>>> 7fdc3223bd628ad50f37cb83144b4fff7985619a
           </value>
         </entry>
       </map>
@@ -231,12 +236,19 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/distance2.py</url>
+<<<<<<< HEAD
+          <line>19</line>
+          <option name="timeStamp" value="3" />
+=======
           <line>20</line>
           <option name="timeStamp" value="7" />
+>>>>>>> 7fdc3223bd628ad50f37cb83144b4fff7985619a
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
+<<<<<<< HEAD
+=======
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/get_init_point.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -288,4 +300,5 @@
       </provider>
     </entry>
   </component>
+>>>>>>> 7fdc3223bd628ad50f37cb83144b4fff7985619a
 </project>
