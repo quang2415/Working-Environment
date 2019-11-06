@@ -22,13 +22,14 @@ function [Ty,T,S] = proTraS(NT)
     idMax = [0];
     index_remove_group = [1];
     index_remove_elements =false(n,1);
-    disp(index_remove_elements);
     while Cost > eps
         index_remove_elements(S) = 1;
         diffPoints_Opt = TI(~index_remove_elements);
         Ty(S(end)) = s;
         %Tim khoang cach nho nhat cua mot diem den mot cum
         d = distance2(T(diffPoints_Opt,:), T(S(iS),:));
+        %a = T(diffPoints_Opt,:);
+        disp(T(S(iS),:));
         [~, indMin] = min(d,[],2); %return index of S
         Ty(diffPoints_Opt) = iS(indMin);
         

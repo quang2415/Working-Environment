@@ -21,7 +21,12 @@ def proTras(NT):
     Cost = 1
     TI = np.linspace(1,n,num=n, dtype=int).reshape(n,1)
     Ty = np.zeros((n,1), dtype=int)
-    S = x_init_ind
+    S = []
+    S.append(x_init_ind)
+
+    # S = np.asarray([])
+    # np.insert(S,len(S),x_init_ind)
+
     iS = [1]
     wr = [0]
     pre_max_dist = [0]
@@ -29,15 +34,24 @@ def proTras(NT):
     idMax = [0]
     index_remove_group = [1]
     index_remove_elements = np.full((n,1), False)
-    print(index_remove_elements)
 
     while Cost>eps:
         index_remove_elements[S] = True
         diffPoints_Opt = TI[~index_remove_elements]
+        # diffPoints_Opt = diffPoints_Opt.reshape(len(diffPoints_Opt),1)
+        diffPoints_Opt = diffPoints_Opt.reshape(1,len(diffPoints_Opt))
         Ty[S[-1]] = s
 
         "Tim khoang cach nho nhat tu 1 diem den 1 cum"
-        d = distance2(T[diffPoints_Opt,:], T[S[iS],:])
+        a = T[np.ix_((diffPoints_Opt-1).flatten())]
+        temp = np.asarray(S)
+        b = temp[np.ix_(np.asarray(iS)-1)]
+        c = T[np.ix_(temp[np.ix_(np.asarray(iS)-1)])]
+
+        d = distance2(T[(diffPoints_Opt-1).flatten()], (T[np.ix_(temp[np.ix_(np.asarray(iS)-1)])]).flatten())
+
+        print(d)
+        print('Ay yo')
 
 
     return 0
