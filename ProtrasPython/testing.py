@@ -15,7 +15,7 @@ df = pd.DataFrame(dict)
 
 
 a = np.array([1, 3, 2, -4, 5, 7, 10])
-b = np.array([[3, 0],[1, 5]])
+b = np.array([[3, 0],[-1, 5]])
 c = np.asarray([[0]])
 d = [0]
 # print(a.argmin(axis=1))
@@ -23,7 +23,8 @@ d = [0]
 # print(b[np.ix_(c.flatten())])
 
 e = np.insert(a,len(a),0)
-print(e)
+f = b.min(1)
+print(f)
 
 # a = np.asarray(np.linspace(1,n,num=n, dtype=int)).transpose()
 

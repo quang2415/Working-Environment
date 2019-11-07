@@ -49,6 +49,11 @@ def proTras(NT):
         c = T[np.ix_(temp[np.ix_(np.asarray(iS)-1)])]
 
         d = distance2(T[(diffPoints_Opt-1).flatten()], (T[np.ix_(temp[np.ix_(np.asarray(iS)-1)])]).flatten())
+        a = T[(diffPoints_Opt-1).flatten()]
+        indMin = np.argmin(d, axis=1)
+        indMin = indMin.reshape(len(indMin),1)
+        indMin = indMin.flatten()
+        Ty[(diffPoints_Opt-1).flatten()] = iS[indMin]
 
         print(d)
         print('Ay yo')
