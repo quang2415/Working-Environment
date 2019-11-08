@@ -28,8 +28,12 @@ function [Ty,T,S] = proTraS(NT)
         Ty(S(end)) = s;
         %Tim khoang cach nho nhat cua mot diem den mot cum
         d = distance2(T(diffPoints_Opt,:), T(S(iS),:));
-        a = T(diffPoints_Opt,:);
         [~, indMin] = min(d,[],2); %return index of S
+        
+        A = Ty;
+        B = iS(indMin);
+        C = Ty(diffPoints_Opt);
+        
         Ty(diffPoints_Opt) = iS(indMin);
         
         

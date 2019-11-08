@@ -27,7 +27,7 @@ def proTras(NT):
     # S = np.asarray([])
     # np.insert(S,len(S),x_init_ind)
 
-    iS = [1]
+    iS = np.asarray([1])
     wr = [0]
     pre_max_dist = [0]
     weight = [0]
@@ -39,7 +39,7 @@ def proTras(NT):
         index_remove_elements[S] = True
         diffPoints_Opt = TI[~index_remove_elements]
         # diffPoints_Opt = diffPoints_Opt.reshape(len(diffPoints_Opt),1)
-        diffPoints_Opt = diffPoints_Opt.reshape(1,len(diffPoints_Opt))
+        diffPoints_Opt = diffPoints_Opt.reshape(len(diffPoints_Opt),1)
         Ty[S[-1]] = s
 
         "Tim khoang cach nho nhat tu 1 diem den 1 cum"
@@ -52,10 +52,22 @@ def proTras(NT):
         a = T[(diffPoints_Opt-1).flatten()]
         indMin = np.argmin(d, axis=1)
         indMin = indMin.reshape(len(indMin),1)
-        indMin = indMin.flatten()
-        Ty[(diffPoints_Opt-1).flatten()] = iS[indMin]
+        # indMin = indMin.flatten()
 
-        print(d)
+        # Ty[np.ix_((diffPoints_Opt-1).flatten())] = iS[indMin]
+
+        # t_temp = iS[indMin]
+        # print(Ty[(diffPoints_Opt-1).flatten()])
+
+        for x in range(diffPoints_Opt.size):
+            # print(x-1,Ty[x-1],indMin[x-1])
+            # Ty[x-1] = iS[indMin[x-1]]
+            print(x)
+            Ty[diffPoints_Opt[x]-1] = iS[indMin[x]]
+
+        rTy = Ty
+
+
         print('Ay yo')
 
 
