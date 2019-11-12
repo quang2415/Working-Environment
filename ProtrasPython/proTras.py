@@ -2,6 +2,7 @@ from normalize import normalize
 from get_init_point import get_init_point
 import numpy as np
 from distance2 import distance2
+from itertools import compress
 
 def proTras(NT):
     n,p = NT.shape
@@ -62,11 +63,12 @@ def proTras(NT):
         for x in range(diffPoints_Opt.size):
             # print(x-1,Ty[x-1],indMin[x-1])
             # Ty[x-1] = iS[indMin[x-1]]
-            print(x)
             Ty[diffPoints_Opt[x]-1] = iS[indMin[x]]
 
-        rTy = Ty
-
+        temp_Ty = Ty
+        # rTy = [i for inx,i in enumerate(temp_Ty) if (index_remove_elements[idx]==False)]
+        rTy = list(compress(temp_Ty,np.logical_not(index_remove_elements)))
+        print(rTy)
 
         print('Ay yo')
 
