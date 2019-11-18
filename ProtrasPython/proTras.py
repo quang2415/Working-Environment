@@ -70,6 +70,8 @@ def proTras(NT):
         rTy = list(compress(temp_Ty,np.logical_not(index_remove_elements)))
         print(rTy)
 
+        sizeiS = iS.shape[0]
+
         print('Ay yo')
 
 
