@@ -67,10 +67,15 @@ def proTras(NT):
 
         temp_Ty = Ty
         # rTy = [i for inx,i in enumerate(temp_Ty) if (index_remove_elements[idx]==False)]
-        rTy = list(compress(temp_Ty,np.logical_not(index_remove_elements)))
-        print(rTy)
+        # rTy = list(compress(temp_Ty,np.logical_not(index_remove_elements)))
+        rTy = list(compress(Ty,np.logical_not(index_remove_elements)))
+        # print(rTy)
+        rTy = np.asarray(rTy)
 
         sizeiS = iS.shape[0]
+        for yk in range(1,sizeiS+1):
+            print(iS[yk-1])
+            print("")
 
         print('Ay yo')
 
