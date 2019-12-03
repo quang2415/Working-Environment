@@ -40,8 +40,12 @@ function [Ty,T,S] = proTraS(NT)
         % bien Ty sau khi loai cac phan tu remove
         rTy = Ty;
         rTy(index_remove_elements) = [];
-        
+        disp(iS);
         sizeiS = size(iS,2);
+        % disp(['iS : ' iS ',size(iS,2) = ' sizeiS]);
+        % disp(iS(:));
+        % fprintf('size(iS,2) = %s',sizeiS);
+        disp(sizeiS);
         for yk = 1:sizeiS
             id = (rTy == iS(yk)); 
             [maxVal, idMaxTy] = max(d(id,yk)); 
