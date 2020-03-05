@@ -74,7 +74,7 @@ def convert_string_int(input_string):
 
 
 def main():
-	with open("Datasets\imb_IRlowerThan9\ecoli1.txt", 'r') as input_file:
+	with open("dataset\dataset.csv", 'r') as input_file:
 		input_read = input_file.readlines()
 
 	coordinate = []
@@ -87,7 +87,7 @@ def main():
 		coordinate.append(a)
 
 	cost, coreset, _ = protras(coordinate, 0.5)
-	with open("Result\par.txt", 'a+') as output_result:
+	with open("result\par.txt", 'a+') as output_result:
 		output_result.write(str(cost) + "\t")
 		output_result.write(str(coreset) + "\n")
 
