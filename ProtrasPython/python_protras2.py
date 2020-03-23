@@ -74,11 +74,14 @@ def convert_string_int(input_string):
 
 
 def main():
-	with open("Datasets\imb_IRlowerThan9\ecoli1.txt", 'r') as input_file:
+
+	with open('ecoli1.dat', 'r') as input_file:
+	# with open('Datasets/test','r+') as input_file:
 		input_read = input_file.readlines()
 
 	coordinate = []
-	for x in input_read[1:]:
+	# for x in input_read[1:]:
+	for x in input_read[12:]:
 		temp = x.split("\n")[0]
 		temp = temp.split(",")
 		a = []
